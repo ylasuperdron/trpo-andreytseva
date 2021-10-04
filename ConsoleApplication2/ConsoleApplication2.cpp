@@ -34,7 +34,10 @@ nn:
 	case '/':
 		c = a / b;
 		break;
-		
+	default:
+		cout << " Неверное действие ";
+		break;
+
 	}
 	cout << " Ответ >> " << c << endl;
 
