@@ -6,7 +6,6 @@ using namespace std;
 int main (void)
 {
 	setlocale(LC_ALL, "Russian");
-nn:
 	float a;
 	float b;
 	float c;
@@ -19,6 +18,11 @@ nn:
 
 	cout << " Введите второе число >> ";
 	cin >> b;
+	if (b == 0)
+	{
+		cout << " На 0 делить нельзя! ";
+		return 0;
+	} 
 
 	switch (d)
 	{
@@ -34,6 +38,7 @@ nn:
 	case '/':
 		c = a / b;
 		break;
+
 	default:
 		cout << " Неверное действие ";
 		break;
