@@ -5,9 +5,10 @@
 
 
 using namespace std;
-int a, b, res;
+double a, b, res;
 
-int del(int a, int b) {
+double del(double a, double b)
+{
 
     
     try
@@ -17,7 +18,7 @@ int del(int a, int b) {
             throw std::exception("Division by zero\n");
         
        
-        int res = a / b;
+         res = a / b;
          return res;
 
     }
@@ -36,33 +37,26 @@ int del(int a, int b) {
 
 }
 
-int sum(int a, int b)
+double sum(double a, double b)
 {
-    int res = a;
+    res = a + b;
 
-    for (int i = 1; i <= b; ++i)
-    {
-        ++res;
-    }
+    
 
     return res;
 }
 
-int min(int a, int b)
+double min(double a, double b)
 {
-    int res = a;
+     res = a - b;
 
-    for (int i = 1; i <= b; ++i)
-    {
-        --res;
-    }
 
     return res;
 }
 
-int umg(int a, int b)
+double umg(double a, double b)
 {
-    int res = a * b;
+    res = a * b;
     return res;
 }
 
