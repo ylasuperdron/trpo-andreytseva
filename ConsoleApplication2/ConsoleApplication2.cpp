@@ -111,6 +111,6 @@ int main(int argc, char* argv[])
         break;
     default:puts("\n Wrong option!");
     }
-
+    printf("123");
     return 0;
 }
