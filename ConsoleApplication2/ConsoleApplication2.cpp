@@ -7,6 +7,26 @@
 using namespace std;
 int a, b, res;
 
+void del(int a, int b) {
+
+
+    try
+    {
+        if (b == 0)
+            throw std::exception("Division by zero\n"); // проработка исключения "деление на 0"
+
+        res = a / b;
+        std::cout << "chastnoe = " << res;
+
+    }
+    catch (std::exception& e)
+    {
+
+        cout << e.what();
+
+    }
+
+}
 
 int sum(int a, int b)
 {
@@ -51,6 +71,7 @@ int prompt_menu_item()
     cout << "1. +\n"
         << "2. -\n"
         << "3. *\n"
+        << "4. /\n"
         << "5. Выход\n" << endl;
     cout << ">>> ";
     cin >> variant;
@@ -67,16 +88,20 @@ int main(int argc, char* argv[])
         break;
     case 2:
         cout << "-" << endl;
-        std::cout << "sum = " << min(a, b) << "\n";
+        std::cout << "razonst' = " << min(a, b) << "\n";
         break;
     case 3:
         cout << "-" << endl;
-        std::cout << "sum = " << umg(a, b) << "\n";
+        std::cout << "proizvedenie = " << umg(a, b) << "\n";
+        break;
+    case 4:
+        del(a, b); //добавление деления
         break;
     case 5:
         return 0;
         break;
+    default:puts("\n Wrong option!"); //ошибка выбора варианта
     }
 
-    printf("123");
+
 }
