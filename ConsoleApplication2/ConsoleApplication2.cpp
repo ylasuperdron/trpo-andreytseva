@@ -95,6 +95,16 @@ void prompt_menu_item(double a, double b, char variant) {
    
 }
 
+double prov()
+{
+    if (cin.fail())
+    {
+        cout << "Incorrect input." << endl;
+        exit(0);
+        system("pause");
+    }
+}
+
 
 int main() {
     setlocale(LC_ALL, "Rus");
@@ -106,14 +116,14 @@ int main() {
 
     cout << "Введите первое число        >> ";
     cin >> a;
-
+    prov();
 
     cout << "Введите действие(+,-,*,/)   >> ";
     cin >> variant;
 
     cout << "Введите второе число        >> ";
     cin >> b;
-
+    prov();
 
     prompt_menu_item(a, b, variant);
 
