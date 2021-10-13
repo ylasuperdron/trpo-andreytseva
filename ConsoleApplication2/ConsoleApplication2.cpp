@@ -18,8 +18,7 @@ double del(double a, double b)
 
 
         res = a / b;
-        cout << b;
-        return res;
+       
 
 
     }
@@ -27,9 +26,7 @@ double del(double a, double b)
     {
 
         cout << e.what();
-        cout << " Введите второе число снова >> ";
-        cin >> b;
-        return del(a, b);
+        exit(3);
 
     }
 
@@ -65,23 +62,23 @@ double umg(double a, double b)
 
 void prompt_menu_item(double a, double b, char variant) {
 
-
+    double res=NULL;
     switch (variant) {
     case '+':
         system("cls");
-        std::cout << a << " + " << b << " = " << sum(a, b) << "\n";
+        cout << a << " + " << b << " = " << sum(a, b) << "\n";
         break;
     case '-':
         system("cls");
-        std::cout << a << " - " << b << " = " << min(a, b) << "\n";
+        cout << a << " - " << b << " = " << min(a, b) << "\n";
         break;
     case '*':
         system("cls");
-        std::cout << a << " * " << b << " = " << umg(a, b) << "\n";
+        cout << a << " * " << b << " = " << umg(a, b) << "\n";
         break;
     case '/':
         system("cls");
-        std::cout << a << " / " << b << " = " << del(a, b) << "\n";
+        cout << a << " / " << b << " = " << del(a, b) << "\n";
 
         break;
 
