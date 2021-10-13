@@ -18,6 +18,7 @@ double del(double a, double b)
 
 
         res = a / b;
+        cout << b;
         return res;
 
 
@@ -62,7 +63,7 @@ double umg(double a, double b)
 
 
 
-int prompt_menu_item(double a, double b, char variant) {
+void prompt_menu_item(double a, double b, char variant) {
 
 
     switch (variant) {
@@ -91,7 +92,7 @@ int prompt_menu_item(double a, double b, char variant) {
     
 
 
-
+   
 }
 
 
@@ -103,21 +104,26 @@ int main() {
 
 
 
-    cout << "Введите первое число   >> ";
+    cout << "Введите первое число        >> ";
     cin >> a;
 
 
-    cout << "Введите действие       >> ";
+    cout << "Введите действие(+,-,*,/)   >> ";
     cin >> variant;
 
-    cout << "Введите второе число   >> ";
+    cout << "Введите второе число        >> ";
     cin >> b;
 
 
     prompt_menu_item(a, b, variant);
 
 
-
-
+    cout << "Для выхода нажмите Esc\n\n";
+    cout << "Для продолжения нажмите Enter";
+    char c;
+    c = _getch();
+    
+    if (c == 27) return 0;
+    if (c == 13) main();
 
 }
