@@ -44,7 +44,7 @@ double sum(double a, double b)
     return res;
 }
 
-double min(double a, double b)
+double minn(double a, double b)
 {
     res = a - b;
 
@@ -70,7 +70,7 @@ void prompt_menu_item(double a, double b, char variant) {
         break;
     case '-':
         system("cls");
-        cout << a << " - " << b << " = " << min(a, b) << "\n";
+        cout << a << " - " << b << " = " << minn(a, b) << "\n";
         break;
     case '*':
         system("cls");
