@@ -10,10 +10,19 @@ namespace calcullator
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(TestSum)
 		{
 			double res = sum(2, 3);
 			Assert::IsTrue(res==5);
+		}
+		TEST_METHOD(TestDel)
+		{
+			double res = del(6, 2);
+			Assert::IsTrue(res==3);
+		    res = del(15, 2);
+			Assert::IsTrue(res == 7.5);
+			
+			
 		}
 	};
 }
