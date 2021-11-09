@@ -1,10 +1,10 @@
 #include <iostream>
 #include <conio.h>
 #include "schet.h"
+#include <limits>
 
 
 using namespace std;
-
 
 
 int main() {
@@ -13,18 +13,22 @@ int main() {
     double a, b, res;
     char variant;
 
+    char A[1000],B[1000];
 
 
     cout << "¬ведите первое число        >> ";
-    cin >> a;
-    prov();
+    cin >> A;
+    
+    a = proverka(A);
+    
 
     cout << "¬ведите действие(+,-,*,/)   >> ";
     cin >> variant;
+    
 
     cout << "¬ведите второе число        >> ";
-    cin >> b;
-    prov();
+    cin >> B;
+    b = proverka(B);
 
     prompt_menu_item(a, b, variant);
 
@@ -33,8 +37,10 @@ int main() {
     cout << "ƒл€ продолжени€ нажмите Enter";
     char c;
     c = _getch();
+   
+    
 
     if (c == 27) return 0;
-    if (c == 13) main();
+    if (c !=27) main();
 
 }
