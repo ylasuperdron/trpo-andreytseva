@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include "schet.h"
-#include <limits>
+
 
 
 using namespace std;
