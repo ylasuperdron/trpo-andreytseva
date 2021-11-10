@@ -3,38 +3,44 @@
 #include "schet.h"
 
 
+
 using namespace std;
 
 
+	int main() {
+		setlocale(LC_ALL, "Rus");
+		system("cls");
+		double a, b, res;
+		char variant;
 
-int main() {
-    setlocale(LC_ALL, "Rus");
-    system("cls");
-    double a, b, res;
-    char variant;
-
-
-
-    cout << "Введите первое число        >> ";
-    cin >> a;
-    prov();
-
-    cout << "Введите действие(+,-,*,/)   >> ";
-    cin >> variant;
-
-    cout << "Введите второе число        >> ";
-    cin >> b;
-    prov();
-
-    prompt_menu_item(a, b, variant);
+		char A[1000], B[1000];
 
 
-    cout << "Для выхода нажмите Esc\n\n";
-    cout << "Для продолжения нажмите Enter";
-    char c;
-    c = _getch();
+		cout << "Введите первое число: » ";
+		cin >> A;
 
-    if (c == 27) return 0;
-    if (c == 13) main();
+		a = proverka(A);
 
-}
+
+		cout<< "Введите операцию(+,-,*,/) » ";
+		cin >> variant;
+
+
+		cout << "Введите второе число: » ";
+		cin >> B;
+		b = proverka(B);
+
+		prompt_menu_item(a, b, variant);
+
+
+		cout << "Для выхода нажмите Esc\n\n";
+		cout<< "Чтобы продолжить нажмите Enter";
+		char c;
+		c = _getch();
+
+
+
+		if (c == 27) return 0;
+		if (c != 27) main();
+
+	} 
