@@ -1,7 +1,13 @@
+
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "C:\Users\Amson\source\repos\trpo-andreytseva\calculator\schet.cpp"
+
+#include "..\calculator\operation.h"
+#include "..\calculator\proverki.h"
+#include "..\calculator\menu.h"
+
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
 
 namespace testing
 {
@@ -13,8 +19,9 @@ namespace testing
 		{
 			char a[1000] = { "155" };
 			Assert::IsTrue(proverka(a) == 155);
-			char b[1000] = { "abc" };
-			Assert::IsTrue(proverka(b) > -1.7E-308 && proverka(b) < 1.7E-308);
+			//char b[1000] = { "abc" };
+			//Assert::IsTrue(proverka(b) > -1.7E-308 && proverka(b) < 1.7E-308);
+			
 		}
 		TEST_METHOD(Testsum) {
 			Assert::IsTrue(sum(2, 3) == 5);
@@ -42,10 +49,11 @@ namespace testing
 			Assert::IsTrue(del(4.6, 2) == 2.3);
 		}
 		TEST_METHOD(Test_menu) {
-			Assert::IsTrue(prompt_menu_item(2,3,'+') == 0);
-			Assert::IsTrue(prompt_menu_item(154,3,'-') == 0);
-			Assert::IsTrue(prompt_menu_item(0,3,'*') == 0);
-			Assert::IsTrue(prompt_menu_item(546,87,'/') == 0);
+			Assert::IsTrue(prompt_menu_item(2,3,'+') == true);
+			Assert::IsTrue(prompt_menu_item(154,3,'-') == true);
+			Assert::IsTrue(prompt_menu_item(0,3,'*') == true);
+			Assert::IsTrue(prompt_menu_item(546,87,'/') == true);
+			Assert::IsTrue(prompt_menu_item(3, 2, 'f') == false);
 		}
 	};
 }
